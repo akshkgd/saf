@@ -53,6 +53,9 @@ section{
 .fw-700{
     font-weight: 700 !important;
 }
+.fw-600{
+    font-weight: 600 !important;
+}
 .feedback img{
     border-radius: 15px;
 }
