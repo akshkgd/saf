@@ -1,0 +1,105 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/photo-1585254589738-aff16702b974.jpeg');
+    height: 500px;
+    background-size: cover;
+    border-radius: 15px;
+    color: white;
+}
+.bg-heading{
+    font-size: 52px;
+    font-weight: 700;
+}
+.pl-30{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.bg-padding{
+    padding-top:175px;
+    padding-left: 30px;
+}
+section{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+}
+.product-container img{
+    height: auto;
+    width: 100%;
+
+}
+.card{
+    border-radius: 15px !important;
+    
+}
+
+.card:hover{
+    background-color:#C9D8B6;
+    border: 1px solid #C9D8B6;
+}
+.bg-1{
+    background-color:#FFEEDB;
+    border-radius: 15px !important;
+}
+.bg-2{
+    background-color:#FFD8CC;
+    border-radius: 15px !important;
+}
+.bg-3{
+    background-color:#CEE5D0;
+    border-radius: 15px !important;
+}
+.fw-700{
+    font-weight: 700 !important;
+}
+.fw-600{
+    font-weight: 600 !important;
+}
+.feedback img{
+    border-radius: 15px;
+}
+.sLogo{
+    font-weight: 800;
+    font-size: 24px !important;
+}
+.emoji {
+    animation-name: wave-animation; 
+    animation-duration: 1.5s;       
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;       
+    display: inline-block;
+}
+@keyframes wave-animation {
+    0% { transform: rotate( 0deg) }
+    10% { transform: rotate(14deg) }  
+    20% { transform: rotate(-10deg) }
+    30% { transform: rotate(20deg) }
+    40% { transform: rotate(-5deg) }
+    50% { transform: rotate(10deg) }
+    60% { transform: rotate( 0deg) } 
+   100% { transform: rotate( 0deg) }
+ }
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+
+$card-border-radius:12px;
+$modal-content-border-radius:16px;
+$modal-content-border-color:none;
+$dropdown-border-radius: 12px;
+$dropdown-border-color:none;
+$dropdown-box-shadow: 0px 2px 16px rgba(#040303, .15) !important;
+$dropdown-item-padding-y: 2.625rem * .25;
+$dropdown-link-hover-bg:rgb(241, 241, 241);
+
+$theme-colors: (
+    "primary":  blueviolet,
+    "dark":       #040303,
+    "muted": #eeeeee,
+    "success": #1A73E8,
+    "light": whitesmoke,
+    "contacts":#dfdfdf,
+  );
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss'

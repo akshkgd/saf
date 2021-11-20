@@ -6,692 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <style>
-        .sRounded{
-            border-radius: 16px;
-        }
-        .avatar {
-            height: 120px;
-            width: 120px;
-            border-radius: 50%;
-        }
-
-        .btn-bd-primary {
-            font-weight: 600;
-            color: #7952b3;
-            border-color: #7952b3
-        }
-
-        .btn-bd-primary:hover,
-        .btn-bd-primary:active {
-            color: #fff;
-            background-color: #7952b3;
-            border-color: #7952b3
-        }
-
-        .btn-bd-primary:focus {
-            box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25)
-        }
-
-        .btn-bd-download {
-            font-weight: 600;
-            color: #ffe484;
-            border-color: #ffe484
-        }
-
-        .btn-bd-download,
-        .btn-bd-download:active {
-            color: #2a2730;
-            background-color: #ffe484;
-            border-color: #ffe484
-        }
-
-        .btn-bd-download:focus {
-            box-shadow: 0 0 0 3px rgba(255, 228, 132, 0.25)
-        }
-
-        .bd-clipboard {
-            position: relative;
-            display: none;
-            float: right
-        }
-
-        .bd-clipboard+.highlight {
-            margin-top: 0
-        }
-
-        @media (min-width: 768px) {
-            .bd-clipboard {
-                display: block
-            }
-        }
-
-        .btn-clipboard {
-            position: absolute;
-            top: .75em;
-            right: .5em;
-            z-index: 10;
-            display: block;
-            padding: .5em .75em .625em;
-            line-height: 1;
-            color: #212529;
-            background-color: #f8f9fa;
-            border: 0;
-            border-radius: .25rem
-        }
-
-        .btn-clipboard:hover {
-            color: #0d6efd
-        }
-
-        .bd-navbar {
-            padding: .75rem 0;
-            background-color: #7952b3
-        }
-
-        .bd-navbar .navbar-toggler {
-            padding: 0;
-            border: 0
-        }
-
-        .bd-navbar .navbar-toggler .bi {
-            width: 2rem;
-            fill: currentColor
-        }
-
-        .bd-navbar .navbar-nav .nav-link {
-            padding-right: .25rem;
-            padding-left: .25rem;
-            color: rgba(255, 255, 255, 0.85)
-        }
-
-        .bd-navbar .navbar-nav .nav-link:hover,
-        .bd-navbar .navbar-nav .nav-link:focus {
-            color: #fff
-        }
-
-        .bd-navbar .navbar-nav .nav-link.active {
-            font-weight: 600;
-            color: #fff
-        }
-
-        .bd-navbar .navbar-nav-svg {
-            width: 1rem;
-            height: 1rem
-        }
-
-        .skippy {
-            display: block;
-            padding: 1em;
-            color: #fff;
-            text-align: center;
-            background-color: #563d7c;
-            outline: 0
-        }
-
-        .skippy:hover {
-            color: #fff
-        }
-
-        .skippy-text {
-            padding: .5em;
-            outline: 1px dotted
-        }
-
-        .bd-footer {
-            font-size: .875rem;
-            color: #63707c
-        }
-
-        .bd-footer a {
-            font-weight: 600;
-            color: #495057
-        }
-
-        .bd-footer a:hover,
-        .bd-footer a:focus {
-            color: #007bff
-        }
-
-        .bd-footer p {
-            margin-bottom: 0
-        }
-
-        .bd-footer-links {
-            padding-left: 0;
-            margin-bottom: 1rem
-        }
-
-        .bd-footer-links li {
-            display: inline-block
-        }
-
-        .bd-footer-links li+li {
-            margin-left: 1rem
-        }
-
-        .chroma .c {
-            color: #727272
-        }
-
-        .chroma .ch {
-            font-style: italic;
-            color: #60a0b0
-        }
-
-        .chroma .cm {
-            color: #727272
-        }
-
-        .chroma .cp {
-            color: #008085
-        }
-
-        .chroma .cpf {
-            color: #007020
-        }
-
-        .chroma .c1 {
-            color: #727272
-        }
-
-        .chroma .cs {
-            color: #727272
-        }
-
-        .chroma .gd {
-            background-color: #fcc;
-            border: 1px solid #c00
-        }
-
-        .chroma .ge {
-            font-style: italic
-        }
-
-        .chroma .gr {
-            color: #f00
-        }
-
-        .chroma .gh {
-            color: #030
-        }
-
-        .chroma .gi {
-            background-color: #cfc;
-            border: 1px solid #0c0
-        }
-
-        .chroma .go {
-            color: #aaa
-        }
-
-        .chroma .gp {
-            color: #009
-        }
-
-        .chroma .gs {
-            font-weight: 700
-        }
-
-        .chroma .gu {
-            color: #030
-        }
-
-        .chroma .gt {
-            color: #9c6
-        }
-
-        .chroma .gl {
-            text-decoration: underline
-        }
-
-        .chroma .k {
-            color: #069
-        }
-
-        .chroma .kc {
-            color: #069
-        }
-
-        .chroma .kd {
-            color: #069
-        }
-
-        .chroma .kn {
-            color: #069
-        }
-
-        .chroma .kp {
-            color: #069
-        }
-
-        .chroma .kr {
-            color: #069
-        }
-
-        .chroma .kt {
-            color: #078
-        }
-
-        .chroma .m {
-            color: #c24f19
-        }
-
-        .chroma .mb {
-            color: #40a070
-        }
-
-        .chroma .mf {
-            color: #c24f19
-        }
-
-        .chroma .mh {
-            color: #c24f19
-        }
-
-        .chroma .mi {
-            color: #c24f19
-        }
-
-        .chroma .il {
-            color: #c24f19
-        }
-
-        .chroma .mo {
-            color: #c24f19
-        }
-
-        .chroma .s {
-            color: #d73038
-        }
-
-        .chroma .sa {
-            color: #4070a0
-        }
-
-        .chroma .sb {
-            color: #c30
-        }
-
-        .chroma .sc {
-            color: #c30
-        }
-
-        .chroma .dl {
-            color: #4070a0
-        }
-
-        .chroma .sd {
-            font-style: italic;
-            color: #c30
-        }
-
-        .chroma .s2 {
-            color: #c30
-        }
-
-        .chroma .se {
-            color: #c30
-        }
-
-        .chroma .sh {
-            color: #c30
-        }
-
-        .chroma .si {
-            color: #a00
-        }
-
-        .chroma .sx {
-            color: #c30
-        }
-
-        .chroma .sr {
-            color: #337e7e
-        }
-
-        .chroma .s1 {
-            color: #c30
-        }
-
-        .chroma .ss {
-            color: #fc3
-        }
-
-        .chroma .na {
-            color: #006ee0
-        }
-
-        .chroma .nb {
-            color: #366
-        }
-
-        .chroma .nc {
-            color: #168174
-        }
-
-        .chroma .no {
-            color: #360
-        }
-
-        .chroma .nd {
-            color: #6b62de
-        }
-
-        .chroma .ni {
-            color: #727272
-        }
-
-        .chroma .ne {
-            color: #c00
-        }
-
-        .chroma .nf {
-            color: #b715f4
-        }
-
-        .chroma .nl {
-            color: #6b62de
-        }
-
-        .chroma .nn {
-            color: #007ca5
-        }
-
-        .chroma .nt {
-            color: #2f6f9f
-        }
-
-        .chroma .nv {
-            color: #033
-        }
-
-        .chroma .o {
-            color: #555
-        }
-
-        .chroma .ow {
-            color: #000
-        }
-
-        .chroma .w {
-            color: #bbb
-        }
-
-        .chroma .language-bash::before,
-        .chroma .language-sh::before {
-            color: #adb5bd;
-            content: "$ ";
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none
-        }
-
-        .chroma .language-powershell::before {
-            color: #009;
-            content: "PM> ";
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none
-        }
-
-        #carbonads {
-            max-width: 28rem;
-            padding: .75rem;
-            margin-right: auto;
-            margin-left: auto;
-            overflow: auto;
-            background-color: #f8f9fa;
-            border-radius: .25rem
-        }
-
-        @media (min-width: 992px) {
-            #carbonads {
-                margin-right: 0;
-                margin-left: 0
-            }
-        }
-
-        .carbon-img {
-            float: left;
-            margin-right: .75rem
-        }
-
-        @media (min-width: 768px) {
-            .carbon-img {
-                margin-bottom: .5rem
-            }
-        }
-
-        @media (min-width: 992px) {
-            .carbon-img {
-                margin-bottom: 0
-            }
-        }
-
-        .carbon-text,
-        .carbon-poweredby {
-            display: block;
-            color: #6c757d
-        }
-
-        .carbon-text:hover,
-        .carbon-text:focus,
-        .carbon-poweredby:hover,
-        .carbon-poweredby:focus {
-            color: #343a40;
-            text-decoration: none
-        }
-
-        .carbon-text {
-            margin-bottom: .5rem;
-            text-decoration: none
-        }
-
-        @media (min-width: 768px) {
-            .carbon-text {
-                font-size: .875rem
-            }
-        }
-
-        .carbon-poweredby {
-            margin-top: .75rem;
-            font-size: .875rem
-        }
-
-        .bi {
-            display: inline-block;
-            vertical-align: -.125em
-        }
-
-        .hero-notice {
-            background-color: #d2f4ea
-        }
-
-        @media (min-width: 540px) {
-            .hero-notice {
-                border-radius: 5em !important
-            }
-        }
-
-        .highlight {
-            padding: 1.25rem;
-            margin-bottom: 1.5rem;
-            background-color: #f8f9fa;
-            border-radius: .25rem
-        }
-
-        .highlight pre {
-            margin-bottom: 0;
-            scrollbar-width: none
-        }
-
-        .highlight pre::-webkit-scrollbar {
-            display: none
-        }
-
-        .highlight pre code {
-            word-wrap: normal
-        }
-
-        .bd-example {
-            padding: 1.25rem;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-top-left-radius: .25rem;
-            border-top-right-radius: .25rem
-        }
-
-        .bd-example+.bd-clipboard+.highlight pre {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0
-        }
-
-        .f0 {
-            font-size: 2rem
-        }
-
-        @media (min-width: 520px) {
-            .f0 {
-                font-size: 3rem
-            }
-        }
-
-        .f3 {
-            font-size: 1.25rem
-        }
-
-        @media (min-width: 520px) {
-            .f3 {
-                font-size: 1.5rem
-            }
-        }
-
-        .f5 {
-            font-size: 1rem
-        }
-
-        .hero {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05)
-        }
-
-        .hero .highlight pre {
-            padding-right: 4em;
-            margin-bottom: 0;
-            border-radius: .5rem
-        }
-
-        .hero .btn-clipboard {
-            top: .625em
-        }
-
-        .hero hr {
-            max-width: 100px
-        }
-
-        @media (min-width: 768px) {
-            .icon-search {
-                width: 35%
-            }
-        }
-
-        .list {
-            font-size: 2rem
-        }
-
-        .list a:hover,
-        .list a:hover .name,
-        .list a:focus,
-        .list a:focus .name {
-            color: var(--bs-blue) !important
-        }
-
-        .list:empty::before {
-            display: block;
-            width: 100%;
-            padding: 100px 2rem;
-            margin-right: 15px;
-            margin-left: 15px;
-            color: #adb5bd;
-            text-align: center;
-            content: "Nothing found, try searching again.";
-            background-color: #f8f9fa;
-            border-radius: .5rem
-        }
-
-        .btn-group>.btn {
-            flex-shrink: 0
-        }
-
-        .name {
-            font-size: .8125rem
-        }
-
-        @media (min-width: 1200px) {
-            .row-cols-xl-8>* {
-                flex: 0 0 12.5%;
-                max-width: 12.5%
-            }
-        }
-
-        .icon-demo {
-            background-color: #fdfdfd;
-            background-image: radial-gradient(circle, #ddd 1px, rgba(0, 0, 0, 0) 1px);
-            background-size: 1rem 1rem
-        }
-
-        .icon-demo .bi,
-        .icon-demo-examples .bi {
-            width: 1em;
-            height: 1em
-        }
-
-        .py-6 {
-            padding-top: 4.5rem !important;
-            padding-bottom: 4.5rem !important
-        }
-
-        @font-face {
-            font-family: bootstrap-icons;
-            src: url("../../font/fonts/bootstrap-icons.woff2?231ce25e89ab5804f9a6c427b8d325c9") format("woff2"), url("../../font/fonts/bootstrap-icons.woff?231ce25e89ab5804f9a6c427b8d325c9") format("woff")
-        }
-
-        [class^="bi-"]::before,
-        [class*=" bi-"]::before {
-            display: inline-block;
-            font-family: bootstrap-icons !important;
-            font-style: normal;
-            font-weight: 400 !important;
-            font-variant: normal;
-            line-height: 1;
-            text-transform: none;
-            vertical-align: -.125em;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        .bi-alarm::before {
-            content: "\f102"
-        }
-
-        .bi-github::before {
-            content: "\f3ed"
-        }
+        
     </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-botto">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/icons8-fruit-bag-100.png" alt="" class="img-flu pb-1" height="40">
-                S Agro Foods
+            <a class="navbar-brand sLogo text-primary" href="#">
+                <!-- <img src="img/icons8-fruit-bag-100.png" alt="" class="img-flu pb-1" height="40">
+                S Agro Foods -->
+                    S Agro Foods
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -703,12 +34,12 @@
                         <a class="nav-link" aria-current="page" href="#">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products & Services</a>
+                        <a class="nav-link" href="product.html">Products & Services</a>
                     </li>
 
                 </ul>
                 <form class="d-flex">
-                    <a href="" class="btn btn-bd-download">Contact Us</a>
+                    <a href="" class="btn btn-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#login">Contact Us</a>
                 </form>
             </div>
         </div>
@@ -725,17 +56,11 @@
                             <a href="" class="btn btn-outline-light">Explore Now</a>
                         </div>
                     </div>
-                    <h1 class="mt-5 fw-600">We directly source fruits from the farmers <br>and then deliver to wholesellers in just 12 hours</h1>
-                    <a class="d-block d-sm-inline-block py-1 px-3 mb-4 text-dark text-decoration-none rounded-3 hero-notice"
-                        href="https://blog.getbootstrap.com/2021/02/22/bootstrap-icons-1-4-0/">
+                    <h1 class="mt-5 bg-heading text-dark">We directly source fruits from the farmers <br>and then deliver to wholesellers in just 12 hours</h1>
+                    <p class="fs-5">
                         <strong>Best fruit processing</strong> company in jharkhand!
-                    </a>
-                    <p class="fs-5 text-left mt-2 ">The food processing industry in India is poised to lead the new economy in driving investments, opportunities and employment. The food processing sector plays a key role in reducing the wastage of perishable produce, enhancing shelf life and ensuring value addition at every stage of the farm-to-fork value chain.
-
-                        Today, the Indian food processing industry is evolving rapidly with the rise of newer product segments. This trend is an indicator of shift in consumer preferences for processed food. Further, many States which were traditionally not strong in food processing have seen rising food processing capacities and incentives. The industry is thus expected to witness an expansion by product types and geographies.
-                        
-                        The rise of the food processing industry is of enormous significance as it provides a vital link between two pillars of the economy i.e. agriculture and manufacturing. Eliminating inefficiencies and wastages, leveraging innovation and opportunities are the drivers for this sunrise industry.</p>
-                </div>
+                </p>
+                    </div>
             </div>
         </div>
     </section>
@@ -744,26 +69,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="bg-1 p-3 m-2">
+                    <div class="bg-1 p-3 m-2" data-bs-toggle="modal" data-bs-target="#delivery">
                         <h1><i class="bi bi-truck"></i></h3>
                         <h4 class="fw-700">Free Delivery</h4>
-                        <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta dolores recusandae ea eius rem, </p>
+                        <p class="small"> We provide same day delivery of fresh bananas and mangoes ensuring our products reach you fresh and ready for consumption
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="bg-2 p-3 m-2">
+                    <div class="bg-2 p-3 m-2" data-bs-toggle="modal" data-bs-target="#refund">
                         <h1><i class="bi bi-wallet2"></i></h1>
                         <h4 class="fw-700">Same day Refund</h4>
-                        <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta dolores recusandae ea eius rem, </p>
+                        <p class="small">Just order us and we will take care of the rest. Although we try to ensure the best quality, if you are not satisfied with the quality then we will provide a same day refund
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="bg-3 p-3 m-2">
+                    <div class="bg-3 p-3 m-2" data-bs-toggle="modal" data-bs-target="#return">
                         <h1><i class="bi bi-clock-history"></i></h1>
-                        <h4 class="fw-700">Same day return</h4>
-                        <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta dolores recusandae ea eius rem, </p>
+                        <h4 class="fw-700">Adjustable Order</h4>
+                        <p class="small">Even at the last moment if you want to change the order size we will try our best to help you with that
+                        </p>
                     </div>
                 </div>
+                <p class="fs-5 text-left mt-5 ">The food processing industry in India is poised to lead the new economy in driving investments, opportunities and employment. The food processing sector plays a key role in reducing the wastage of perishable produce, enhancing shelf life and ensuring value addition at every stage of the farm-to-fork value chain.
+
+                    Today, the Indian food processing industry is evolving rapidly with the rise of newer product segments. This trend is an indicator of shift in consumer preferences for processed food. Further, many States which were traditionally not strong in food processing have seen rising food processing capacities and incentives. The industry is thus expected to witness an expansion by product types and geographies.
+                    
+                    The rise of the food processing industry is of enormous significance as it provides a vital link between two pillars of the economy i.e. agriculture and manufacturing. Eliminating inefficiencies and wastages, leveraging innovation and opportunities are the drivers for this sunrise industry.</p>
+            
             </div>
         </div>
 
@@ -773,8 +107,102 @@
    
 
 
+<!-- contact modal starts-->
+<div class="modal" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <!-- <h5 class="modal-title">Modal title</h5> -->
+            <h2 class="fw-bold mb-0">Contact Us Here <span   class="emoji  wave">👋</span></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nemo non corrupti id, minus maiores quos beatae nobis voluptatum eum?</p>
+<a href="mailto:"></a>
+<a href="tel:+"></a>
+            <a href="mailto:sharif.khan@sagrofoods.in" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-envelope-open"></i></span> Mail</a>
+            <a href="tel:+919955501500" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-telephone-inbound"></i></span> Call</a>
+            <a href="https://wa.me/+919955501500?text=Hi" target="_blank" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-whatsapp"></i></span> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      </div>
 
+      <!-- contact modal ends -->
+      <!-- delivery modal starts-->
+<div class="modal" id="delivery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <!-- <h5 class="modal-title">Modal title</h5> -->
+            <h2 class="fw-bold mb-0">Contact Us Here <span   class="emoji  wave">👋</span></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <p class="text-muted"> We provide same day delivery of fresh bananas and mangoes ensuring our products reach you fresh and ready for consumption
+            </p>
+<a href="mailto:"></a>
+<a href="tel:+"></a>
+            <a href="mailto:sharif.khan@sagrofoods.in" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-envelope-open"></i></span> Mail</a>
+            <a href="tel:+919955501500" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-telephone-inbound"></i></span> Call</a>
+            <a href="https://wa.me/+919955501500?text=Hi" target="_blank" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-whatsapp"></i></span> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      </div>
 
+      <!-- delivery modal ends -->
+      <!-- refund modal starts-->
+<div class="modal" id="refund" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <!-- <h5 class="modal-title">Modal title</h5> -->
+            <h2 class="fw-bold mb-0">Contact Us Here <span   class="emoji  wave">👋</span></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <p class="text-muted">Just order us and we will take care of the rest. Although we try to ensure the best quality, if you are not satisfied with the quality then we will provide a same day refund
+            </p>
+<a href="mailto:"></a>
+<a href="tel:+"></a>
+            <a href="mailto:sharif.khan@sagrofoods.in" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-envelope-open"></i></span> Mail</a>
+            <a href="tel:+919955501500" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-telephone-inbound"></i></span> Call</a>
+            <a href="https://wa.me/+919955501500?text=Hi" target="_blank" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-whatsapp"></i></span> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- contact modal ends -->
+      <!-- return modal starts-->
+<div class="modal" id="return" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <!-- <h5 class="modal-title">Modal title</h5> -->
+            <h2 class="fw-bold mb-0">Contact Us Here <span   class="emoji  wave">👋</span></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <p class="text-muted">Even at the last moment if you want to change the order size we will try our best to help you with that</p>
+<a href="mailto:"></a>
+<a href="tel:+"></a>
+            <a href="mailto:sharif.khan@sagrofoods.in" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-envelope-open"></i></span> Mail</a>
+            <a href="tel:+919955501500" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-telephone-inbound"></i></span> Call</a>
+            <a href="https://wa.me/+919955501500?text=Hi" target="_blank" class="btn btn-contacts rounded-pill px-4"><span class="fs-5"><i class="bi bi-whatsapp"></i></span> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- contact modal ends -->
+<!-- JavaScript Bundle with Popper -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 
